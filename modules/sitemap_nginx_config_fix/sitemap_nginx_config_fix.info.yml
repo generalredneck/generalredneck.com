@@ -1,0 +1,5 @@
+name: Sitemap Nginx Config Fix
+type: module
+description: Resolve canonical URL issues on the sitemap path
+core: 8.x
+package: Custom

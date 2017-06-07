@@ -1,0 +1,14 @@
+{
+  "name": "drupal/sitemap_nginx_config_fix",
+  "type": "drupal-module",
+  "description": "Resolve canonical URL issues on the sitemap path",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/sitemap_nginx_config_fix",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/sitemap_nginx_config_fix",
+    "source": "http://cgit.drupalcode.org/sitemap_nginx_config_fix"
+  },
+  "require": { }
+}

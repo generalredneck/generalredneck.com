@@ -1,0 +1,5 @@
+services:
+  sitemap_nginx_config_fix.path_processor:
+    class: Drupal\sitemap_nginx_config_fix\PathProcessor
+    tags:
+      - { name: path_processor_inbound, priority: 800 }
