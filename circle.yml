@@ -3,9 +3,7 @@ machine:
   timezone:
     America/Chicago
   php:
-    # https://circleci.com/docs/build-image-trusty/#php
     version: 7.0.11
-  environment:
     # In addition to the environment variables defined in this file, also
     # add the following variables in the Circle CI UI.
     #
@@ -15,8 +13,6 @@ machine:
     # TERMINUS_TOKEN: The Pantheon machine token
     # GITHUB_TOKEN:   The GitHub personal access token
     # GIT_EMAIL:      The email address to use when making commits
-    PATH: $PATH:~/bin:tests/scripts
-
 dependencies:
   cache_directories:
     - ~/.composer/cache
@@ -28,14 +24,12 @@ dependencies:
       fi
     - git config --global user.email "$GIT_EMAIL"
     - git config --global user.name "Robo Redneck"
-  override:
+  post:
     - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
     # Do the stuff to build the site here to test.
-
 test:
   override:
-    echo "Tests here."
-
+    - echo "Tests here."
 deployment:
   build-assets:
     branch: master
