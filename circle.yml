@@ -44,4 +44,4 @@ deployment:
     commands:
       - terminus secrets:set -n "$TERMINUS_SITE.dev" token "$GITHUB_TOKEN" --file='github-secrets.json' --clear --skip-if-empty
       - terminus build-env:push-code "$TERMINUS_SITE.dev"
-      - terminus drush -n $TERMINUS_SITE.dev -- local --yes
+      - terminus drush -n $TERMINUS_SITE.dev -- local
