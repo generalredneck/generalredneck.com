@@ -24,6 +24,15 @@ dependencies:
       fi
     - git config --global user.email "$GIT_EMAIL"
     - git config --global user.name "Robo Redneck"
+  override:
+    - composer global require -n "hirak/prestissimo:^0.3"
+    - composer global require -n "consolidation/cgr"
+    - /usr/bin/env COMPOSER_BIN_DIR=$HOME/bin composer --working-dir=$HOME require pantheon-systems/terminus "^1"
+    - terminus --version
+    - /usr/bin/env COMPOSER_BIN_DIR=$HOME/bin composer --working-dir=$HOME require drush/drush "^8"
+    - mkdir -p ~/.terminus/plugins
+    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
+    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
   post:
     - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
     # Do the stuff to build the site here to test.
