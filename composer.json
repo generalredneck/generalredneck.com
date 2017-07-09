@@ -110,6 +110,11 @@
         ".htaccess",
         "web.config"
       ]
+    },
+    "patches": {
+      "drupal/token": {
+        "Image Tokens can cause a fatal when referencing non-existing entities.": "https://www.drupal.org/files/issues/token-check_for_missing_image_entity-2893341-2.patch"
+      }
     }
   },
   "config": {
