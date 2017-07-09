@@ -18,7 +18,7 @@
     "drupal/checklistapi": "^1.4",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
-    "drupal/console": "^1.0.0-rc8",
+    "drupal/console": "1.0.0-rc23",
     "drupal/core": "^8",
     "drupal/fontawesome": "^1.2",
     "drupal/google_analytics": "^2.1",

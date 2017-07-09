@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e41ba6fc5b813aab5a53d4e6eb198de",
+    "content-hash": "547ebdf0e83e6432a56c3ba5fe08d65c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1868,7 +1868,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/fontawesome-8.x-1.2.zip",
-                "reference": null,
+                "reference": "8.x-1.2",
                 "shasum": "2b635bd9746340abbececfc633950cd8db85e1d0"
             },
             "require": {
@@ -2148,7 +2148,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-2.0-beta2.zip",
-                "reference": null,
+                "reference": "8.x-2.0-beta2",
                 "shasum": "0b29113a3c00c7ab3ba73e811da3450edca4c0bb"
             },
             "require": {
@@ -2202,7 +2202,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-2.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-2.0-beta1",
                 "shasum": "bf823a9d08d08b99d5ea1469729b30f9969ef519"
             },
             "require": {
@@ -2246,7 +2246,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/migrate_upgrade-8.x-2.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-2.0-beta1",
                 "shasum": "d5458312b74f2d6975b76d5f1115368b364c91b7"
             },
             "require": {
@@ -2509,7 +2509,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "d24c7f1ffddbd0fc56bc92bacae1c4ff769a4442"
             },
             "require": {

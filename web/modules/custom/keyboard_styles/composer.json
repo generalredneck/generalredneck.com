@@ -1,0 +1,14 @@
+{
+  "name": "drupal/keyboard_styles",
+  "type": "drupal-module",
+  "description": "Injects styles that change the <kbd> html element into a pretty keyboard like symbol",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/keyboard_styles",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/keyboard_styles",
+    "source": "http://cgit.drupalcode.org/keyboard_styles"
+  },
+  "require": { }
+}

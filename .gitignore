@@ -34,6 +34,7 @@ web/web.config
 # Development specific ignores.
 
 .vagrant
+console
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.

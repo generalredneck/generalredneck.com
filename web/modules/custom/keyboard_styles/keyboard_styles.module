@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains keyboard_styles.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function keyboard_styles_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the keyboard_styles module.
+    case 'help.page.keyboard_styles':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Injects styles that change the &lt;kbd&gt; html element into a pretty keyboard like symbol') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function keyboard_styles_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = "keyboard_styles/keyboard_styles";
+}
