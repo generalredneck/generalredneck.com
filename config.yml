@@ -5,6 +5,7 @@ drupal_install_site: false
 drupal_build_composer_project: false
 drupal_composer_install_dir: "/var/www/drupalvm"
 drupal_major_version: 8
+drupalvm_webserver: nginx
 
 php_version: "7.0"
 installed_extras:
