@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "547ebdf0e83e6432a56c3ba5fe08d65c",
+    "content-hash": "a83eeb6b12c5ca31cc7885831922588c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1166,6 +1166,69 @@
             }
         },
         {
+            "name": "drupal/captcha",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/captcha",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "5b6c701bdab332bac61f59dcc78e05578f94d8b7"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1487198586"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "elachlan",
+                    "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "soxofaan",
+                    "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                }
+            ],
+            "description": "The CAPTCHA module provides this feature to virtually any user facing web form on a Drupal site.",
+            "homepage": "https://www.drupal.org/project/captcha",
+            "support": {
+                "source": "http://cgit.drupalcode.org/captcha"
+            }
+        },
+        {
             "name": "drupal/checklistapi",
             "version": "1.4.0",
             "source": {
@@ -2298,6 +2361,49 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/migrate_upgrade"
             }
+        },
+        {
+            "name": "drupal/nocaptcha_recaptcha",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/nocaptcha_recaptcha",
+                "reference": "feea668af5ecd4f71ace205586d6c3e21faf1550"
+            },
+            "require": {
+                "drupal/captcha": "*",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1473761939"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "piyuesh23",
+                    "homepage": "https://www.drupal.org/user/1116218"
+                }
+            ],
+            "description": "Provides integration with Google's nocaptcha recaptcha on top of Captcha API.",
+            "homepage": "https://www.drupal.org/project/nocaptcha_recaptcha",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/nocaptcha_recaptcha",
+                "issues": "https://www.drupal.org/project/issues/nocaptcha_recaptcha"
+            },
+            "time": "2016-09-13 10:04:17"
         },
         {
             "name": "drupal/pathauto",
@@ -8035,6 +8141,7 @@
     "minimum-stability": "alpha",
     "stability-flags": {
         "drupal/libraries": 20,
+        "drupal/nocaptcha_recaptcha": 20,
         "drupal/redirect": 15,
         "drupal/simple_block": 10,
         "drupal/xmlsitemap": 15
