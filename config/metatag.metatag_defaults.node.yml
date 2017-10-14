@@ -1,0 +1,21 @@
+uuid: e9657e4a-0b0e-4474-8552-24c707b43dc7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uKgwQEQEWbnGjAqxKpZufzhnECt1acCS2-zF_mF6nFo
+id: node
+label: Content
+tags:
+  description: '[node:summary]'
+  title: '[node:title] | [site:name]'
+  og_title: '[node:title]'
+  og_image: '[node:field_image:0:large]'
+  og_updated_time: '[node:changed]'
+  article_modified_time: '[node:changed]'
+  og_description: '[node:summary]'
+  og_image_width: '[node:field_image:0:width]'
+  og_image_height: '[node:field_image:0:height]'
+  og_type: '[node:content-type]'
+  article_published_time: '[node:created]'
+  article_tag: '[node:field_tags]'

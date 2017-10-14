@@ -1,0 +1,18 @@
+uuid: 7eac004d-d40a-48ab-ab56-ac559709a21e
+langcode: en
+status: false
+dependencies:
+  theme:
+    - footheme
+id: footheme_menu_menu_favorite_blogs
+theme: footheme
+region: ''
+weight: -23
+provider: null
+plugin: 'system_menu_block:menu-favorite-blogs'
+settings:
+  id: broken
+  label: 'Following Blogs'
+  provider: core
+  label_display: visible
+visibility: {  }

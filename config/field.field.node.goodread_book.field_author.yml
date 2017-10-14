@@ -1,0 +1,26 @@
+uuid: c5810bee-aba1-4702-b0d8-3a30d8abdfca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.goodread_book
+id: node.goodread_book.field_author
+field_name: field_author
+entity_type: node
+bundle: goodread_book
+label: Author
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: autocreate
+    vid: '2'
+    name: Anonymous
+    vocabulary_machine_name: authors
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

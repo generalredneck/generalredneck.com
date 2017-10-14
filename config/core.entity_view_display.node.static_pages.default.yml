@@ -1,0 +1,35 @@
+uuid: b28ddb7a-5fc7-4508-93fe-764405aed201
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.static_pages.body
+    - field.field.node.static_pages.field_tags
+    - node.type.static_pages
+  module:
+    - text
+    - user
+id: node.static_pages.default
+targetEntityType: node
+bundle: static_pages
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    label: above
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

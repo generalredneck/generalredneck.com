@@ -1,0 +1,11 @@
+uuid: c923004d-ae4a-47bf-aa27-d72fd3e57b3c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Feed item'
+type: feed_item
+description: 'This content type is being used for automatically aggregated content from feeds.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

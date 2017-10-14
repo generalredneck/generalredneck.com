@@ -1,0 +1,11 @@
+uuid: 413f59a1-fb2b-4bcc-870f-e8e9659af4a6
+langcode: en
+status: true
+dependencies: {  }
+name: Event
+type: event
+description: 'An event such as an appearance or meeting.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

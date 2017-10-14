@@ -1,0 +1,12 @@
+uuid: 4394bd58-a529-415f-b845-398aaa23e07a
+langcode: en
+status: true
+dependencies: {  }
+id: website_feedback
+label: 'Website feedback'
+recipients:
+  - generalredneck@gmail.com
+reply: "Thank you for contacting me. I appreciate you taking the time to hit me up. I'll get back to you as soon as I possibly can.\r\n\r\nThanks,\r\nAllan Chappell\r\nGR"
+weight: 0
+message: ''
+redirect: ''

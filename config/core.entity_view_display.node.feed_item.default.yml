@@ -1,0 +1,26 @@
+uuid: 4872dfa5-dcbd-42f9-828f-78d9d58288d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feed_item.field_feed_item_description
+    - node.type.feed_item
+  module:
+    - text
+    - user
+id: node.feed_item.default
+targetEntityType: node
+bundle: feed_item
+mode: default
+content:
+  field_feed_item_description:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

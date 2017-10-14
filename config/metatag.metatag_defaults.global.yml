@@ -1,0 +1,17 @@
+uuid: 9282fd45-a97d-48ea-992b-242596e7c39f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b-qxCu1VLGWjqvXKv4Nt7y2BUo5VSGpEIj8gb6C_PUY
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url:unaliased]'
+  content_language: en-US
+  title: '[current-page:title] | [site:name]'
+  image_src: 'https://en.gravatar.com/userimage/17221027/e6e905d6153109f2e5e9552a5a2ccc37.jpg?size=600'
+  og_image: 'https://en.gravatar.com/userimage/17221027/e6e905d6153109f2e5e9552a5a2ccc37.jpg?size=600'
+  og_url: '[current-page:url:absolute]'
+  og_title: '[current-page:title]'
+  og_site_name: '[site:name]'

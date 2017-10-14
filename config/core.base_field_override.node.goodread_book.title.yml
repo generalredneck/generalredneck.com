@@ -1,0 +1,18 @@
+uuid: ca45e662-661a-4d9c-a152-982ffe0eced5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.goodread_book
+id: node.goodread_book.title
+field_name: title
+entity_type: node
+bundle: goodread_book
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

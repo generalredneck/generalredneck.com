@@ -1,0 +1,20 @@
+uuid: 2982ebd8-6337-4926-9a4e-e28135f7a17c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - corolla
+id: corolla_system_main
+theme: corolla
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

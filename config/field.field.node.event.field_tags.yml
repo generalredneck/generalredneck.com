@@ -1,0 +1,21 @@
+uuid: 8bbb2ab0-a437-48e3-892d-ee361fa56891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.event
+id: node.event.field_tags
+field_name: field_tags
+entity_type: node
+bundle: event
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

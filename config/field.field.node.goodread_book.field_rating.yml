@@ -1,0 +1,23 @@
+uuid: c8ec5190-6c5f-4f9c-b174-907af1e7a5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.goodread_book
+id: node.goodread_book.field_rating
+field_name: field_rating
+entity_type: node
+bundle: goodread_book
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 5
+  prefix: ''
+  suffix: ''
+field_type: decimal

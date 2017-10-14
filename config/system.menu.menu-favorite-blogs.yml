@@ -1,0 +1,8 @@
+uuid: 7013226a-ca83-4e63-b56d-4d2486bf322d
+langcode: en
+status: true
+dependencies: {  }
+id: menu-favorite-blogs
+label: 'Favorite Blogs'
+description: 'Blogs I''m following'
+locked: false

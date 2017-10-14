@@ -1,0 +1,24 @@
+uuid: 9e87fd18-5b7e-4af1-a08d-e023b3709772
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-favorite-blogs
+  module:
+    - system
+  theme:
+    - bartik
+id: bootstrap_gr_menu_menu_favorite_blogs
+theme: bartik
+region: footer_first
+weight: -9
+provider: null
+plugin: 'system_menu_block:menu-favorite-blogs'
+settings:
+  id: broken
+  label: 'Following Blogs'
+  provider: core
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

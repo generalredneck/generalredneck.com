@@ -1,0 +1,18 @@
+uuid: 5d73b906-0689-4ee0-aa59-399d9474ca57
+langcode: en
+status: false
+dependencies:
+  theme:
+    - bootstrap
+id: bootstrap_menu_menu_favorite_blogs
+theme: bootstrap
+region: ''
+weight: -23
+provider: null
+plugin: 'system_menu_block:menu-favorite-blogs'
+settings:
+  id: broken
+  label: 'Following Blogs'
+  provider: core
+  label_display: visible
+visibility: {  }

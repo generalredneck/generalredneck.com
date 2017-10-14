@@ -1,0 +1,21 @@
+uuid: ff9041c7-05b7-4f92-990a-1de3694a5011
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_read
+    - node.type.goodread_book
+  module:
+    - datetime
+id: node.goodread_book.field_date_read
+field_name: field_date_read
+entity_type: node
+bundle: goodread_book
+label: 'Date Read'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,22 @@
+uuid: 5786aeba-266d-4eea-a2b1-081f6633394a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.goodread_book
+  module:
+    - text
+id: node.goodread_book.body
+field_name: body
+entity_type: node
+bundle: goodread_book
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

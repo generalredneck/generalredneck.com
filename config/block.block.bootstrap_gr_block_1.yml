@@ -1,0 +1,25 @@
+uuid: f7238b4f-6830-4f03-a5e4-c3b1f8f65980
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b255ba95-8743-41d0-b48f-1f44130692ac'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: bootstrap_gr_block_1
+theme: bartik
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:b255ba95-8743-41d0-b48f-1f44130692ac'
+settings:
+  id: 'block_content:b255ba95-8743-41d0-b48f-1f44130692ac'
+  label: 'Social Media Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

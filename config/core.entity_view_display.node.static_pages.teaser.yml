@@ -1,0 +1,30 @@
+uuid: 5e27b985-29c3-4a67-b5f3-129ec661ab54
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.static_pages.body
+    - field.field.node.static_pages.field_tags
+    - node.type.static_pages
+  module:
+    - text
+    - user
+id: node.static_pages.teaser
+targetEntityType: node
+bundle: static_pages
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_tags: true

@@ -1,0 +1,25 @@
+uuid: d4e40155-44ca-4eaa-ac52-ca9130b8d29d
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:a59783bf-b172-4c8e-8b83-203aaab52adf'
+  module:
+    - block_content
+  theme:
+    - bootstrap
+id: bootstrap_block_5
+theme: bootstrap
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:a59783bf-b172-4c8e-8b83-203aaab52adf'
+settings:
+  id: 'block_content:a59783bf-b172-4c8e-8b83-203aaab52adf'
+  label: 'Tip Jar'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

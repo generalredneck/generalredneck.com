@@ -1,0 +1,38 @@
+uuid: 149ec3ab-1437-42f3-85a2-2b1c029785fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.goodread_book.body
+    - field.field.node.goodread_book.field_author
+    - field.field.node.goodread_book.field_date_read
+    - field.field.node.goodread_book.field_image
+    - field.field.node.goodread_book.field_rating
+    - field.field.node.goodread_book.field_self
+    - node.type.goodread_book
+  module:
+    - text
+    - user
+id: node.goodread_book.teaser
+targetEntityType: node
+bundle: goodread_book
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_author: true
+  field_date_read: true
+  field_image: true
+  field_rating: true
+  field_self: true

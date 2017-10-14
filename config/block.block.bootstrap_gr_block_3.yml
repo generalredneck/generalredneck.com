@@ -1,0 +1,30 @@
+uuid: 56623a02-2c03-48da-a54c-ffe2b884b888
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:99b44bd4-e9d4-4d32-a994-454f8b7dfdc9'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: bootstrap_gr_block_3
+theme: bartik
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:99b44bd4-e9d4-4d32-a994-454f8b7dfdc9'
+settings:
+  id: 'block_content:99b44bd4-e9d4-4d32-a994-454f8b7dfdc9'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /about-me

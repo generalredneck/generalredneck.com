@@ -1,0 +1,18 @@
+uuid: 89bf5b3c-99af-4177-976b-d6f25d9b379a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dir_listing
+id: node.dir_listing.title
+field_name: title
+entity_type: node
+bundle: dir_listing
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

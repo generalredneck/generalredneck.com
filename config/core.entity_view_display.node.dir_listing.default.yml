@@ -1,0 +1,26 @@
+uuid: f9b3bd59-c643-4231-b76e-3393ba59f873
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dir_listing.body
+    - node.type.dir_listing
+  module:
+    - text
+    - user
+id: node.dir_listing.default
+targetEntityType: node
+bundle: dir_listing
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,11 @@
+uuid: 63dbf228-ae56-479c-84d4-892d49429bea
+langcode: en
+status: true
+dependencies: {  }
+name: 'Directory listing'
+type: dir_listing
+description: 'A listing of files similar to how Apache lists files in a directory.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

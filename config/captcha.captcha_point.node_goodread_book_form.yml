@@ -1,0 +1,7 @@
+uuid: 1ca3c517-77a0-4bb4-af17-eb2d2daacc87
+langcode: en
+status: false
+dependencies: {  }
+formId: node_goodread_book_form
+captchaType: default
+label: null

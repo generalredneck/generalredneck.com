@@ -1,0 +1,9 @@
+uuid: bead2561-3566-4fd8-813b-ec92518eb473
+langcode: en
+status: true
+dependencies: {  }
+name: Shelves
+vid: shelves
+description: ''
+hierarchy: 0
+weight: 0

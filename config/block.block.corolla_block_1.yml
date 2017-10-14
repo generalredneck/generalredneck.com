@@ -1,0 +1,25 @@
+uuid: 47837411-e496-4a7f-9a1f-86beb5148d6f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b255ba95-8743-41d0-b48f-1f44130692ac'
+  module:
+    - block_content
+  theme:
+    - corolla
+id: corolla_block_1
+theme: corolla
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:b255ba95-8743-41d0-b48f-1f44130692ac'
+settings:
+  id: 'block_content:b255ba95-8743-41d0-b48f-1f44130692ac'
+  label: 'Social Media Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

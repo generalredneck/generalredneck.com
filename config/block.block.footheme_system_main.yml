@@ -1,0 +1,20 @@
+uuid: 104e2d76-d888-422e-bdae-d505ed793842
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - footheme
+id: footheme_system_main
+theme: footheme
+region: ''
+weight: -28
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

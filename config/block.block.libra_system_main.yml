@@ -1,0 +1,20 @@
+uuid: db2f1359-5e88-4fce-9ec0-f6a29fc41b25
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - libra
+id: libra_system_main
+theme: libra
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

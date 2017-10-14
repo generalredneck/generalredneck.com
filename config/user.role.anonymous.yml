@@ -1,0 +1,25 @@
+uuid: 8f710ed3-ee73-4c27-aa21-2428bea3572e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access news feeds'
+  - 'access site map'
+  - 'access site-wide contact form'
+  - 'download files'
+  - 'edit own comments'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view directory listings'
+  - 'view disqus comments'

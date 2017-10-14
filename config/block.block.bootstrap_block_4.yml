@@ -1,0 +1,30 @@
+uuid: 3d54997d-a15f-4dfb-b084-c03c31cf8475
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:97e6b8cb-2cbc-4b07-9761-085f35a90fa9'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap
+id: bootstrap_block_4
+theme: bootstrap
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:97e6b8cb-2cbc-4b07-9761-085f35a90fa9'
+settings:
+  id: 'block_content:97e6b8cb-2cbc-4b07-9761-085f35a90fa9'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /about-me

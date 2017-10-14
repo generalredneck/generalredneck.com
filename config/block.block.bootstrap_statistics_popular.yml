@@ -1,0 +1,21 @@
+uuid: b548fe41-0fd9-419c-b345-988f1d443a0e
+langcode: en
+status: false
+dependencies:
+  theme:
+    - bootstrap
+id: bootstrap_statistics_popular
+theme: bootstrap
+region: ''
+weight: -25
+provider: null
+plugin: statistics_popular_block
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+  top_day_num: '1'
+  top_all_num: '3'
+  top_last_num: '3'
+visibility: {  }

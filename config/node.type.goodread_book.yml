@@ -1,0 +1,11 @@
+uuid: 902a6904-31a6-4d59-9151-0ffedaf2a973
+langcode: en
+status: true
+dependencies: {  }
+name: 'GoodRead Book'
+type: goodread_book
+description: 'Nodes populated by a GoodRead Rss Feed.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

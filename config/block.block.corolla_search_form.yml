@@ -1,0 +1,20 @@
+uuid: 2926dd7c-74bd-4850-9305-53793349753d
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - corolla
+id: corolla_search_form
+theme: corolla
+region: ''
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  provider: search
+  label_display: '0'
+visibility: {  }
