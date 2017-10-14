@@ -1,0 +1,7 @@
+name: general-redneck
+recipe: pantheon
+config:
+  framework: drupal8
+  env: dev
+  site: general-redneck
+  id: 42158888-3386-400a-b737-0aa7d9e3a821
