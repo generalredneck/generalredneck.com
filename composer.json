@@ -21,7 +21,7 @@
     "drupal/core": "^8.5.0",
     "drupal/ctools": "3.2.0",
     "drupal/fontawesome": "^1.2",
-    "drupal/google_analytics": "^2.1",
+    "drupal/google_analytics": "2.4.0",
     "drupal/libraries": "3.x-dev",
     "drupal/markdown": "^1.2",
     "drupal/metatag": "^1.0",
