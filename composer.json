@@ -19,6 +19,7 @@
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/core": "^8.5.0",
+    "drupal/ctools": "3.2.0",
     "drupal/fontawesome": "^1.2",
     "drupal/google_analytics": "^2.1",
     "drupal/libraries": "3.x-dev",
