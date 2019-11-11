@@ -7,6 +7,18 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+	"name": "drupal-library/fontawesome",
+	"version": "4.7.0",
+	"type": "drupal-library",
+	"dist": {
+	  "url": "https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip",
+	  "type": "zip"
+	}
+      }
     }
   ],
     "require": {
@@ -36,6 +48,7 @@
 	    "drupal/simple_block": "^1.0@beta",
 	    "drupal/token": "1.5.0",
 	    "drupal/xmlsitemap": "1.0.0-alpha3",
+	    "drupal-library/fontawesome": "*",
 	    "drush-ops/behat-drush-endpoint": "^9.3",
 	    "drush/drush": "~8.3",
 	    "pantheon-systems/quicksilver-pushback": "^2",

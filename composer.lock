@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ea56574a3d5f65a2ce374859deb826e",
+    "content-hash": "fb7d53b7902e96a5223e63afc7498455",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1226,6 +1226,15 @@
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
             "time": "2019-03-30T10:41:38+00:00"
+        },
+        {
+            "name": "drupal-library/fontawesome",
+            "version": "4.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "drupal/captcha",
