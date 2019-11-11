@@ -31,6 +31,24 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 
+
+$config['evercurrent.admin_config']['send'] = FALSE;
+      $config['evercurrent.admin_config']['send'] = TRUE;
+      $config['evercurrent.admin_config']['target_address'] = 'https://live-evercurrent-clone.pantheonsite.io';
+      $settings['evercurrent_environment_url'] = 'https://generalredneck.com';
+      $settings['evercurrent_environment_token'] = 'b29a72ecacd57fedef0b415821311461';
+
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  switch($_ENV['PANTHEON_ENVIRONMENT']) {
+    case 'live':
+      $config['evercurrent.admin_config']['send'] = TRUE;
+      $config['evercurrent.admin_config']['target_address'] = 'https://live-evercurrent-clone.pantheonsite.io';
+      $settings['evercurrent_environment_url'] = 'https://generalredneck.com';
+      $settings['evercurrent_environment_token'] = 'b29a72ecacd57fedef0b415821311461';
+      break;
+  }
+}
+
 /**
  * Always install the 'standard' profile to stop the installer from
  * modifying settings.php.
