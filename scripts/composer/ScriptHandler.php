@@ -28,7 +28,6 @@ class ScriptHandler
       'modules',
       'profiles',
       'themes',
-      'libraries',
     ];
 
     // Required for unit testing
