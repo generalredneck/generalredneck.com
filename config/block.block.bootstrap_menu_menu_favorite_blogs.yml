@@ -2,6 +2,10 @@ uuid: 5d73b906-0689-4ee0-aa59-399d9474ca57
 langcode: en
 status: false
 dependencies:
+  config:
+    - system.menu.menu-favorite-blogs
+  module:
+    - system
   theme:
     - bootstrap
 id: bootstrap_menu_menu_favorite_blogs
@@ -15,4 +19,7 @@ settings:
   label: 'Following Blogs'
   provider: core
   label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
 visibility: {  }

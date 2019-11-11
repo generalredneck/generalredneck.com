@@ -2,6 +2,10 @@ uuid: 7eac004d-d40a-48ab-ab56-ac559709a21e
 langcode: en
 status: false
 dependencies:
+  config:
+    - system.menu.menu-favorite-blogs
+  module:
+    - system
   theme:
     - footheme
 id: footheme_menu_menu_favorite_blogs
@@ -15,4 +19,7 @@ settings:
   label: 'Following Blogs'
   provider: core
   label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
 visibility: {  }
