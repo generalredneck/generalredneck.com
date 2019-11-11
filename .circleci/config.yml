@@ -243,5 +243,3 @@ workflows:
       - deploy_to_pantheon:
           requires:
             - build_php
-    jobs:
-      - composer_lock_updater
