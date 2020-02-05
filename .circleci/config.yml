@@ -124,6 +124,7 @@ jobs:
       - run: git config --global user.email "Allan's Bot"
       - run: git config --global user.name "generalredneck+circleci@gmail.com"
       - run: git fetch origin
+      - run: git checkout -b deploy
       # remove any .git directories that may exist in vendor libraries* so those
       # libraries don't get excluded from our repo. Remember kiddies somedir/*
       # returns all files/dirs that are NOT dot (hidden). This protects our repos'
@@ -138,8 +139,17 @@ workflows:
   version: 2
   build_deploy_and_test:
     jobs:
-      - static_tests
-      - build_php
+      - static_tests:
+          filters:
+            branches:
+              ignore: deploy
+      - build_php:
+          filters:
+            branches:
+              ignore: deploy
       - deploy_to_pantheon:
           requires:
             - build_php
+          filters:
+            branches:
+              only: master
