@@ -143,6 +143,3 @@ workflows:
       - deploy_to_pantheon:
           requires:
             - build_php
-          branches:
-            only:
-              - master
