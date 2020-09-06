@@ -1,155 +1,70 @@
-# https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
-defaults: &defaults
-  docker:
-    - image: quay.io/pantheon-public/build-tools-ci:6.x
-  working_directory: ~/example_drops_8_composer
-  environment:
-    #=========================================================================
-    # In addition to the environment variables defined in this file, also
-    # add the following variables in the Circle CI UI.
-    #
-    # See: https://circleci.com/docs/2.0/env-vars/
-    #
-    # TERMINUS_SITE:  Name of the Pantheon site to run tests on, e.g. my_site
-    # TERMINUS_TOKEN: The Pantheon machine token
-    # GITHUB_TOKEN:   The GitHub personal access token
-    # GIT_EMAIL:      The email address to use when making commits
-    #
-    # TEST_SITE_NAME: The name of the test site to provide when installing.
-    # ADMIN_PASSWORD: The admin password to use when installing.
-    # ADMIN_EMAIL:    The email address to give the admin when installing.
-    #=========================================================================
-    TZ: "/usr/share/zoneinfo/America/Los_Angeles"
-
-    # The variables below usually do not need to be modified.
-
-    #======================================================================================================================================
-    # Circle CI 2.0 does not yet expand environment variables so they have to be manually EXPORTed
-    # Once environment variables can be expanded the variables below can be uncommented and the EXPORTs in set-up-globals.sh can be removed
-    # See: https://discuss.circleci.com/t/unclear-how-to-work-with-user-variables-circleci-provided-env-variables/12810/11
-    # See: https://discuss.circleci.com/t/environment-variable-expansion-in-working-directory/11322
-    # See: https://discuss.circleci.com/t/circle-2-0-global-environment-variables/8681
-    #======================================================================================================================================
-
-    NOTIFY: 'scripts/github/add-commit-comment {project} {sha} "Created multidev environment [{site}#{env}]({dashboard-url})." {site-url}'
-    ADMIN_USERNAME: admin
-    # BUILD_TOOLS_VERSION: ^2.0.0-alpha4
-    TERM: dumb
+# Required environmental variables should be set via the CircleCI web interface:
+#
+# - ACQUIA_USER
+#     Cloud API E-mail
+# - ACQUIA_TOKEN
+#     Cloud API Private key. Located in your profile under security.
+#     See: https://docs.acquia.com/acquia-cloud/api/auth
+# - ACQUIA_CANONICAL_ENV
+#     Environment to get database from. Usually "prod".
+# - ACQUIA_ENDPOINT
+#     Cloud API Endpoint. Usually "https://cloudapi.acquia.com/v1".
+# - ACQUIA_REALM
+#     Cloud API Realm. Usually "prod" or "devcloud".
+#     See: https://docs.acquia.com/acquia-cloud/api#realm
+# - ACQUIA_SITE
+#     Cloud API Site parameter.
+# - ACQUIA_REPO
+#     Acquia git repo url.
+# - ACQUIA_BOT_EMAIL
+#     Email used to commit deployment commits.
+# - ACQUIA_BOT_NAME
+#     Display name use for the deployment committer.
 
 version: 2
+defaults: &defaults
+  docker:
+    - image: circleci/php:7.0-node-browsers
+      environment:
+        DATE_TIMEZONE: America/Chicago
+        TERM: xterm
+        ACQUIA_BOT_EMAIL: generalredneck+deploybot@gmail.com
+        ACQUIA_BOT_NAME: "Deploying Redneck"
+  working_directory: ~/project
+
 jobs:
-  static_tests:
-    <<: *defaults
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - composer-cache-{{ checksum "composer.lock" }}
-            - composer-cache-
-
-      - run:
-          # Set TERMINUS_ENV and related environment variables.
-          # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
-          name: setup-environment-vars
-          command: /build-tools-ci/scripts/set-environment
-
-      - run:
-          name: run static tests
-          command: ./.ci/test/static/run
-
-      - save_cache:
-          key: composer-cache-{{ checksum "composer.lock" }}
-          paths:
-            - $HOME/.composer/cache
-
-  build_php:
+  deploy:
     <<: *defaults
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - composer-cache-{{ checksum "composer.lock" }}
-            - composer-cache-
-            - vendor-{{ checksum "composer.lock" }}
-            - vendor-
-
-      - run:
-          # Set TERMINUS_ENV and related environment variables.
-          # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
-          name: setup-environment-vars
-          command: /build-tools-ci/scripts/set-environment
-
-      - run:
-          name: run PHP build step
-          command: ./.ci/build/php
-
-      - save_cache:
-          key: vendor-{{ checksum "composer.lock" }}
-          paths:
-            - $CIRCLE_WORKING_DIRECTORY/vendor
-
-      - persist_to_workspace:
-          root: .
-          paths:
-            - web
-            - vendor
-            - drush
-
-  deploy_to_pantheon:
-    <<: *defaults
-    steps:
-      - checkout
-
-      # Attach the workspace
-      - attach_workspace:
-          at: /tmp
-
-      - run:
-          # Set TERMINUS_ENV and related environment variables.
-          # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
-          name: setup-environment-vars
-          command: /build-tools-ci/scripts/set-environment
-
-      # Rsync the build artifact pieces web directory
-      - run:
-          name: sync build artifact
-          command: rsync -rz /tmp/web /tmp/vendor /tmp/drush .
-
+      - run: sudo composer self-update
       - run: "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
-      - run: composer run prepare-for-pantheon
-      - run: npm install
-      - run: git config --global user.email "Allan's Bot"
-      - run: git config --global user.name "generalredneck+circleci@gmail.com"
-      - run: git fetch origin
-      - run: git checkout -b deploy
+      - run: composer install --ignore-platform-reqs --no-dev
+      - run: echo "build assets for deploying" && composer build-assets
+      - run: echo "deploying to the $circle_branch on acquia."
+      - run: git config --global user.email "$ACQUIA_BOT_EMAIL"
+      - run: git config --global user.name "$ACQUIA_BOT_NAME"
+      - run: "sed -i '1,/######## ACQUIA IGNORE BELOW THIS LINE ########/d' .gitignore"
       # remove any .git directories that may exist in vendor libraries* so those
       # libraries don't get excluded from our repo. Remember kiddies somedir/*
       # returns all files/dirs that are NOT dot (hidden). This protects our repos'
       # .git folder from being blown away.
       - run: find ./* -type d | grep .git | xargs rm -rf
+      # Remove unwanted gitignores here. Follow the example below.
+      # Remove simplesamlphp .gitignore which would cause our config and metadata
+      # symlinks to be ignored. If it's already not there, GREAT!
+      # - rm ./vendor/simplesamlphp/simplesamlphp/.gitignore || exit 0
       # Commit and push to Acquia.
       - run: git add .
       - run: git commit -am "Built assets."
-      - run: git push origin deploy -f --tags
-      - run: echo "If deployment was successful, Acquia Cloud dev/post-code-update hook will handle importing config, updating db, and clearing caches."
+      - run: git tag "`date +%F-%H%M%S`"
+      - run: git push origin $CIRCLE_BRANCH:deploy -f --tags
 workflows:
   version: 2
-  build_deploy_and_test:
+  build-deploy:
     jobs:
-      - static_tests:
+      - deploy:
           filters:
             branches:
-              ignore: deploy
-      - build_php:
-          filters:
-            branches:
-              ignore: deploy
-      - deploy_to_pantheon:
-          requires:
-            - build_php
-          filters:
-            branches:
-              only: master
+              only:
+                - master
