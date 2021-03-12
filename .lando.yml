@@ -1,7 +1,10 @@
 name: general-redneck
-recipe: pantheon
+recipe: drupal8
 config:
-  framework: drupal8
-  env: dev
-  site: general-redneck
-  id: 42158888-3386-400a-b737-0aa7d9e3a821
+  webroot: web
+  xdebug: true
+  php: "7.4"
+tooling:
+  drush:
+    service: appserver
+    cmd: "drush --root=/app/web --uri=http://general-redneck.lndo.site"
