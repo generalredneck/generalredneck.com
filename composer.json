@@ -51,9 +51,7 @@
 	    "drupal-library/fontawesome": "*",
 	    "drush-ops/behat-drush-endpoint": "^9.3",
 	    "drush/drush": "~8.3",
-	    "pantheon-systems/quicksilver-pushback": "^2",
 	    "php": ">=7.0.8",
-	    "rvtraveller/qs-composer-installer": "^1.1",
 	    "zaporylie/composer-drupal-optimizations": "^1.0"
   },
     "require-dev": {
