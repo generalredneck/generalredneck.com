@@ -1,9 +1,0 @@
-send: 1
-listen: false
-target_address: 'https://app.evercurrent.io/'
-key: ''
-status: 1
-interval: '0'
-_core:
-  default_config_hash: exrIIsNf76twA5SJSV9vWwBpW1bKN0wNXlxRgGfRbNw
-override: 0

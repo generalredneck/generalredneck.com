@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the GeneralRedneck Custom module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function generalredneck_custom_install() {
+  $res = \Drupal::keyValue('update_fetch_task');
+  $res->deleteAll();
+}
+

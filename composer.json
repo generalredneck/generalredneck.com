@@ -1,42 +1,45 @@
 {
-  "name": "generalredneck/generalredneck.com",
-  "description": "GeneralRedneck.com",
-  "type": "project",
-  "license": "MIT",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "package",
-      "package": {
-    "name": "drupal-library/fontawesome",
-    "version": "4.7.0",
-    "type": "drupal-library",
-    "dist": {
-      "url": "https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip",
-      "type": "zip"
-    }
-      }
-    }
-  ],
+    "name": "generalredneck/generalredneck.com",
+    "description": "GeneralRedneck.com",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal-library/fontawesome",
+                "version": "5.13.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://use.fontawesome.com/releases/v5.13.1/fontawesome-free-5.13.1-web.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/protitude/module_markdown"
+        }
+    ],
     "require": {
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "^1.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/captcha": "^1.0.0-beta4",
-        "drupal/checklistapi": "^1.10.0",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core-recommended": "^8.7",
         "drupal/ctools": "^3.2.0",
         "drupal/evercurrent": "^2.0",
-        "drupal/fontawesome": "^1.2",
+        "drupal/fontawesome": "^2.0",
         "drupal/google_analytics": "^2.4.0",
         "drupal/libraries": "^3.0.0-alpha1",
-        "drupal/markdown": "^1.2",
+        "protitude/markdown": "dev-8.x-1.x",
         "drupal/metatag": "^1.8.0",
         "drupal/migrate_plus": "^4.2.0",
         "drupal/migrate_tools": "^4.1.0",
@@ -44,21 +47,21 @@
         "drupal/nocaptcha_recaptcha": "^1.x-dev",
         "drupal/pathauto": "^1.4.0",
         "drupal/redirect": "^1.4.0",
-        "drupal/seo_checklist": "^4.0",
+        "drupal/seo_checklist": "^5.0",
         "drupal/simple_block": "^1.0@beta",
         "drupal/token": "^1.5.0",
         "drupal/xmlsitemap": "^1.0.0-alpha3",
         "drupal-library/fontawesome": "*",
         "drush-ops/behat-drush-endpoint": "^9.3",
-        "drush/drush": "^9.0",
+        "drush/drush": "^9.0 || ^10.0",
         "php": ">=7.0.8",
         "zaporylie/composer-drupal-optimizations": "^1.0"
-  },
+    },
     "require-dev": {
         "drupal/core-dev": "^8.7.0"
     },
     "conflict": {
-            "drupal/drupal": "*"
+        "drupal/drupal": "*"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -95,13 +98,27 @@
     },
     "extra": {
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/private/scripts/quicksilver/{$name}/": [
+                "type:quicksilver-script"
+            ]
         },
         "build-env": {
             "install-cms": [

@@ -2,3 +2,4 @@ name: Keyboard Styles
 type: module
 description: Injects styles that change the <kbd> html element into a pretty keyboard like symbol
 core: 8.x
+core_version_requirement: ^8 || ^9
