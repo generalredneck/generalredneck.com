@@ -6,7 +6,8 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": ["drupal/nocaptcha_recaptcha"]
         },
         {
             "type": "package",
@@ -23,29 +24,33 @@
         {
             "type": "vcs",
             "url": "https://github.com/protitude/module_markdown"
+        },
+        {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/issue/nocaptcha_recaptcha-3141218.git"
         }
     ],
     "require": {
         "composer/installers": "^1.0 || ^2.0",
         "cweagans/composer-patches": "^1.0",
-        "drupal/core-composer-scaffold": "^8.9",
+        "drupal-library/fontawesome": "*",
         "drupal/captcha": "^1.0.0-beta4",
-        "drupal/core-recommended": "^8.9",
+        "drupal/core-composer-scaffold": "^9.0",
+        "drupal/core-recommended": "^9.0",
         "drupal/ctools": "^3.2.0",
         "drupal/fontawesome": "^2.0",
         "drupal/google_analytics": "^2.4.0",
         "drupal/libraries": "^3.0.0-alpha1",
-        "protitude/markdown": "dev-8.x-1.x",
         "drupal/metatag": "^1.8.0",
-        "drupal/nocaptcha_recaptcha": "^1.x-dev",
+        "drupal/nocaptcha_recaptcha": "dev-3141218-automated-drupal-rector",
         "drupal/pathauto": "^1.4.0",
         "drupal/redirect": "^1.4.0",
         "drupal/seo_checklist": "^5.0",
         "drupal/simple_block": "^1.0@beta",
         "drupal/token": "^1.5.0",
         "drupal/xmlsitemap": "^1.0.0-alpha3",
-        "drupal-library/fontawesome": "*",
-        "drush/drush": "^9.0 || ^10.0"
+        "drush/drush": "^9.0 || ^10.0",
+        "protitude/markdown": "dev-8.x-1.x"
     },
     "require-dev": {
     },
