@@ -1,0 +1,22 @@
+uuid: 6bd4fec9-a55c-4c7f-8df9-dd6c0ee6405e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: PKCgV2td2RjFIOEOwLBjMZg2DR4DQSl22UEEqOHITXA
+id: generalredneck_b5_breadcrumbs
+theme: generalredneck_b5
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

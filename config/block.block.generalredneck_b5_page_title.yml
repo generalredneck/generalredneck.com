@@ -1,0 +1,20 @@
+uuid: 343e118b-9959-4ee7-9cbd-9c85e4713496
+langcode: en
+status: true
+dependencies:
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: TQ-10V5XSCmF_g5EfAehIzmDkq66yAjAQHqZWy4O8OE
+id: generalredneck_b5_page_title
+theme: generalredneck_b5
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

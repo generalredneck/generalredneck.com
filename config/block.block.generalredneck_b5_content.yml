@@ -1,0 +1,22 @@
+uuid: a4dfdb68-90f3-4295-8d0b-e1d853304b3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: vsu1w6NEotaZDBGdZoYRIYhFMwVhKhiTkfgVfedhg4g
+id: generalredneck_b5_content
+theme: generalredneck_b5
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

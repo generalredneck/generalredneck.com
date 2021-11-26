@@ -1,0 +1,25 @@
+uuid: 0f3db272-b66a-4555-896b-25e4e4a98ca4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: 69NJRRPsMoNt13GNEaHzFpvsUGLjoA459ng5xNUMKtc
+id: generalredneck_b5_branding
+theme: generalredneck_b5
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

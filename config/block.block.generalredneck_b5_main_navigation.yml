@@ -1,0 +1,27 @@
+uuid: f5c14562-75f3-47b9-beb9-b1f5ebed9e2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: z4uU9-X62XuhnGSXRjMOLRTKgn4Hmnu9VKcBHboYEos
+id: generalredneck_b5_main_navigation
+theme: generalredneck_b5
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

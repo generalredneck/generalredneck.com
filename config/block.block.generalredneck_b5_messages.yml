@@ -1,0 +1,22 @@
+uuid: 86f9a0fc-89d7-4920-8d55-e09a4031a496
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: Uiqht0fMS5xuyXise5YEXNK_Loa_iwiOabJrw2LFBwY
+id: generalredneck_b5_messages
+theme: generalredneck_b5
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

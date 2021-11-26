@@ -1,0 +1,27 @@
+uuid: 30a47748-393f-4a85-96b0-bd481cd60761
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: DwnSEBiV4BXoNn-bId7XYMnpvmBUnS0aD_B8B1SXSQg
+id: generalredneck_b5_account_menu
+theme: generalredneck_b5
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

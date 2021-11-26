@@ -1,0 +1,20 @@
+uuid: a94e7cd2-71fa-44e4-825e-b0f522159ba0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: rhnocGk55A3HMYEt4AalxZcl98Bodmw9rsbAlmA84fE
+id: generalredneck_b5_local_actions
+theme: generalredneck_b5
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

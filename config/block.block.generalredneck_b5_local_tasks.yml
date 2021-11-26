@@ -1,0 +1,22 @@
+uuid: ceb05397-238d-42b3-af5f-6630452c5d6e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - generalredneck_b5
+_core:
+  default_config_hash: N-J1OyoPnRJRJb4LhB50rYRkDKQLGOQfLp6z8JQyu5Y
+id: generalredneck_b5_local_tasks
+theme: generalredneck_b5
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
