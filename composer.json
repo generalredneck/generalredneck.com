@@ -28,9 +28,9 @@
     "require": {
         "composer/installers": "^1.0 || ^2.0",
         "cweagans/composer-patches": "^1.0",
-        "drupal/core-composer-scaffold": "^9.0",
+        "drupal/core-composer-scaffold": "^8.9",
         "drupal/captcha": "^1.0.0-beta4",
-        "drupal/core-recommended": "^9.0",
+        "drupal/core-recommended": "^8.9",
         "drupal/ctools": "^3.2.0",
         "drupal/fontawesome": "^2.0",
         "drupal/google_analytics": "^2.4.0",
