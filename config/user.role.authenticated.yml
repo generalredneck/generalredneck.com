@@ -1,7 +1,15 @@
 uuid: 38d618ca-8058-46ff-9a58-7b93ce0f7479
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+  module:
+    - contact
+    - filter
+    - fontawesome
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -9,15 +17,8 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access news feeds'
-  - 'access site map'
+  - 'access fontawesome additional settings'
   - 'access site-wide contact form'
-  - 'edit own comments'
-  - 'post comments'
-  - 'search content'
-  - 'skip comment approval'
   - 'use text format filtered_html'
   - 'use text format full_html'
-  - 'view disqus comments'

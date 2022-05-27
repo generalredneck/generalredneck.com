@@ -19,26 +19,26 @@ bundle: event
 mode: default
 content:
   body:
-    label: hidden
-    weight: 2
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_event_date:
-    label: above
-    weight: 0
     type: datetime_default
+    label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
+    weight: 0
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_event_image: true
   field_event_location: true

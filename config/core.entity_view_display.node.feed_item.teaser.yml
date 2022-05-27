@@ -15,16 +15,16 @@ bundle: feed_item
 mode: teaser
 content:
   field_feed_item_description:
-    label: hidden
-    weight: 0
     type: text_trimmed
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 0
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden: {  }

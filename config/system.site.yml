@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+langcode: en
 uuid: 47657f7e-eb6b-4aa4-83fb-1ddf2b3c986b
 name: 'Just A General Redneck''s Blog'
 mail: generalredneck@gmail.com
@@ -8,8 +11,5 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
 mail_notification: ''
