@@ -8,5 +8,9 @@
 // Include bootstrap.
 
 @import '../../../../themes/contrib/bootstrap5/scss/style';
-@import '../css/bootstrap.min'
+@import '../css/bootstrap.min';
 
+code {
+  color: #333;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJ0lEQVQIW2O8e/fufwYGBgZBQUEQxcCIIfDu3Tuwivfv30NUoAsAALHpFMMLqZlPAAAAAElFTkSuQmCC) repeat;
+}

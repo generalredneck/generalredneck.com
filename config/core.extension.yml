@@ -25,6 +25,7 @@ module:
   fontawesome: 0
   generalredneck_custom: 0
   google_analytics: 0
+  highlight_js: 0
   image: 0
   keyboard_styles: 0
   libraries: 0
