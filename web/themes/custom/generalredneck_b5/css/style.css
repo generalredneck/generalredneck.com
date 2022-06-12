@@ -24774,4 +24774,8 @@ kbd {
   border-radius: 5px;
 }
 
+.view-events h2, .view-events .h2 {
+  padding-top: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */

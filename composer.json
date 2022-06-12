@@ -46,10 +46,11 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.0 || ^2.0",
         "components/highlightjs": "*",
+        "composer/installers": "^1.0 || ^2.0",
         "cweagans/composer-patches": "^1.0",
         "drupal-library/fontawesome": "*",
+        "drupal/admin_toolbar": "^3.1",
         "drupal/bootstrap5": "^1.1",
         "drupal/captcha": "^1.0.0-beta4",
         "drupal/core-composer-scaffold": "^9.0",
@@ -154,5 +155,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true
         }
+    },
+    "require-dev": {
+        "drupal/twig_xdebug": "^1.2"
     }
 }

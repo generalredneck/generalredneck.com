@@ -1,0 +1,8 @@
+uuid: 247d4a4c-5616-44ca-ba0d-8128512ce086
+langcode: en
+status: true
+dependencies: {  }
+id: just_date_long
+label: 'Just Date - Long'
+locked: false
+pattern: 'l, F j, Y'
