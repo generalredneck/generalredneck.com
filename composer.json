@@ -42,7 +42,7 @@
         },
         {
             "type": "vcs",
-            "url": "git@git.drupal.org:issue/2902032-3285252.git"
+            "url": "https://git.drupalcode.org/issue/2902032-3285252.git"
         }
     ],
     "require": {
