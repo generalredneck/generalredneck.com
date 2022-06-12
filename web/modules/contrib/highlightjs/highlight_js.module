@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Provides the Highlight JS library.
+ *
+ * @author Juned Kazi
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function highlight_js_page_attachments(array &$attachments) {
+  // Unconditionally attach an asset to the page.
+  $attachments['#attached']['library'][] = 'highlight_js/highlightjs';
+  $config = \Drupal::config('highlight_js.settings');
+  $select_mode = $config->get('select_mode');
+  $attachments['#attached']['drupalSettings']['highlightJs'] = [
+    'selectMode' => $select_mode,
+  ];
+  $attachments['#attached']['library'][] = 'highlight_js/highlight_js.init';
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function highlight_js_library_info_alter(&$libraries, $extension) {
+  // Update Code style.
+  if ($extension == 'highlight_js' && isset($libraries['highlightjs'])) {
+    $config = \Drupal::config('highlight_js.settings');
+    $style = $config->get('style');
+    if ($style && $style != 'default' && isset($libraries['highlightjs']['css']['theme'])) {
+      //Remove default style
+      $default_theme = key($libraries['highlightjs']['css']['theme']);
+      unset($libraries['highlightjs']['css']['theme'][$default_theme]);
+
+      //Add new style
+      $lib_dir = "libraries/highlightjs/styles";
+      $path = '/' . $lib_dir . '/' . $style . '.css';
+      $libraries['highlightjs']['css']['theme'][$path] = [];
+    }
+  }
+}
