@@ -1,0 +1,7 @@
+highlight_js.config:
+  path: 'admin/config/user-interface/highlight_js'
+  defaults:
+    _form: '\Drupal\highlight_js\Form\HighlightJsSettings'
+    _title: 'Highlight JS Configuration'
+  requirements:
+    _permission: 'administer highlight js'
