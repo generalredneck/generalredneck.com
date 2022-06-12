@@ -1,0 +1,5 @@
+highlight_js.config:
+  title: Highlight JS settings
+  description: 'Set highlight JS style.'
+  route_name: highlight_js.config
+  parent: system.admin_config_ui
