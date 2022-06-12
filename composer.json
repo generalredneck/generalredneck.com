@@ -11,15 +11,26 @@
         },
         {
             "type": "package",
-            "package": {
-                "name": "drupal-library/fontawesome",
-                "version": "5.13.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://use.fontawesome.com/releases/v5.13.1/fontawesome-free-5.13.1-web.zip",
-                    "type": "zip"
+            "package": [
+                {
+                    "name": "drupal-library/fontawesome",
+                    "version": "5.13.1",
+                    "type": "drupal-library",
+                    "dist": {
+                        "url": "https://use.fontawesome.com/releases/v5.13.1/fontawesome-free-5.13.1-web.zip",
+                        "type": "zip"
+                    }
+                },
+                {
+                    "name": "components/highlightjs",
+                    "version": "9.12.0",
+                    "type": "drupal-library",
+                    "dist": {
+                        "url": "https://github.com/components/highlightjs/archive/master.zip",
+                        "type": "zip"
+                    }
                 }
-            }
+            ]
         },
         {
             "type": "vcs",
@@ -28,10 +39,15 @@
         {
             "type": "vcs",
             "url": "https://git.drupalcode.org/issue/nocaptcha_recaptcha-3141218.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@git.drupal.org:issue/2902032-3285252.git"
         }
     ],
     "require": {
         "composer/installers": "^1.0 || ^2.0",
+        "components/highlightjs": "*",
         "cweagans/composer-patches": "^1.0",
         "drupal-library/fontawesome": "*",
         "drupal/bootstrap5": "^1.1",
@@ -41,6 +57,7 @@
         "drupal/ctools": "^3.2.0",
         "drupal/fontawesome": "^2.0",
         "drupal/google_analytics": "^2.4.0",
+        "drupal/highlightjs": "dev-3285252-D9-compatibility",
         "drupal/libraries": "^3.0.0-alpha1",
         "drupal/metatag": "^1.8.0",
         "drupal/nocaptcha_recaptcha": "dev-3141218-automated-drupal-rector",

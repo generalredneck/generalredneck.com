@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "979e22dd2ff5c9381ceef544d0d547d7",
+    "content-hash": "1391b7c732959b3d8840b438895a1720",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -113,6 +113,15 @@
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/1.33.1"
             },
             "time": "2020-12-05T05:59:11+00:00"
+        },
+        {
+            "name": "components/highlightjs",
+            "version": "9.12.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/components/highlightjs/archive/master.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "composer/installers",
@@ -2069,6 +2078,24 @@
                 "source": "https://git.drupal.org/project/google_analytics.git",
                 "issues": "https://www.drupal.org/project/issues/google_analytics"
             }
+        },
+        {
+            "name": "drupal/highlightjs",
+            "version": "dev-3285252-D9-compatibility",
+            "source": {
+                "type": "git",
+                "url": "git@git.drupal.org:issue/2902032-3285252.git",
+                "reference": "5f054c0a052453d1a9e95075445e618226403aa8"
+            },
+            "require": {
+                "components/highlightjs": "9.12.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "JavaScript Syntax Highlighter for client-side syntax highlighting.",
+            "time": "2022-06-12T01:22:08+00:00"
         },
         {
             "name": "drupal/libraries",
@@ -7479,6 +7506,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/captcha": 10,
+        "drupal/highlightjs": 20,
         "drupal/libraries": 15,
         "drupal/nocaptcha_recaptcha": 20,
         "drupal/simple_block": 10,
