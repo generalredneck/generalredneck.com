@@ -1353,12 +1353,12 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "fethi.krout",
-                    "homepage": "https://www.drupal.org/user/3206765"
-                },
-                {
                     "name": "matio89",
                     "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "Musa.thomas",
+                    "homepage": "https://www.drupal.org/user/1213824"
                 },
                 {
                     "name": "romainj",
@@ -1413,6 +1413,10 @@
                     "name": "Vladimir Roudakov (vladimiraus)",
                     "homepage": "https://www.drupal.org/u/vladimiraus",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
                 }
             ],
             "description": "Master theme using Bootstrap 5: powerful front-end framework for faster and easier web development.",
@@ -1459,10 +1463,6 @@
             ],
             "authors": [
                 {
-                    "name": "RobLoach",
-                    "homepage": "https://www.drupal.org/user/61114"
-                },
-                {
                     "name": "elachlan",
                     "homepage": "https://www.drupal.org/user/1021502"
                 },
@@ -1477,6 +1477,10 @@
                 {
                     "name": "podarok",
                     "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
                 },
                 {
                     "name": "soxofaan",
@@ -1540,6 +1544,10 @@
                     "name": "Travis Carden",
                     "homepage": "https://www.drupal.org/user/236758",
                     "email": "travis.carden@gmail.com"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
                 }
             ],
             "description": "Provides an API for creating fillable, persistent checklists.",
@@ -2671,20 +2679,16 @@
             ],
             "authors": [
                 {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "RenatoG",
-                    "homepage": "https://www.drupal.org/user/3326031"
-                },
-                {
                     "name": "amateescu",
                     "homepage": "https://www.drupal.org/user/729614"
                 },
                 {
                     "name": "andrei.dincu",
                     "homepage": "https://www.drupal.org/user/2628879"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
                     "name": "juampynr",
@@ -2697,6 +2701,10 @@
                 {
                     "name": "pifagor",
                     "homepage": "https://www.drupal.org/user/2375692"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
                 },
                 {
                     "name": "tadityar",
