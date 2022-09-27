@@ -1,0 +1,25 @@
+{
+  "name": "generalredneck.com",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "semantic-release": "semantic-release --tag-format '${version}'",
+    "confex": "./scripts/sous/confex.sh",
+    "confim": "./scripts/sous/confim.sh",
+    "import-data": "./scripts/sous/import-data.sh",
+    "local-data-bak": "./scripts/sous/local-data-bak.sh",
+    "rebuild": "./scripts/sous/rebuild.sh",
+    "build-theme": "./scripts/sous/build-theme.sh",
+    "theme-build": "npm run build-theme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/generalredneck/generalredneck.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/generalredneck/generalredneck.com/issues"
+  },
+  "homepage": "https://github.com/generalredneck/generalredneck.com#readme"
+}
