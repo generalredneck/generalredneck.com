@@ -69,6 +69,7 @@
         "drupal/token": "^1.5.0",
         "drupal/xmlsitemap": "^1.0.0-alpha3",
         "drush/drush": "^9.0 || ^10.0",
+        "fourkitchens/project_ci": "dev-custom_hosting",
         "protitude/markdown": "dev-8.x-1.x"
     },
     "conflict": {

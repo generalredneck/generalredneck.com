@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d85bf61575d5ac19a43c9649b32a9fc",
+    "content-hash": "af7f4aab6258e20401ff2059bc8941df",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2992,6 +2992,35 @@
                 "source": "https://github.com/enlightn/security-checker/tree/v1.10.0"
             },
             "time": "2022-02-21T22:40:16+00:00"
+        },
+        {
+            "name": "fourkitchens/project_ci",
+            "version": "dev-custom_hosting",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fourkitchens/project_ci.git",
+                "reference": "e3a16f2d918ea53de78ee9c842342faaba1680f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fourkitchens/project_ci/zipball/e3a16f2d918ea53de78ee9c842342faaba1680f5",
+                "reference": "e3a16f2d918ea53de78ee9c842342faaba1680f5",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Allan Chappell",
+                    "email": "allan@fourkitchens.com"
+                }
+            ],
+            "description": "Scripts to help aid in deployment for sites.",
+            "support": {
+                "issues": "https://github.com/fourkitchens/project_ci/issues",
+                "source": "https://github.com/fourkitchens/project_ci/tree/custom_hosting"
+            },
+            "time": "2022-09-27T14:06:53+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -7703,6 +7732,7 @@
         "drupal/nocaptcha_recaptcha": 20,
         "drupal/simple_block": 10,
         "drupal/xmlsitemap": 15,
+        "fourkitchens/project_ci": 20,
         "protitude/markdown": 20
     },
     "prefer-stable": true,
