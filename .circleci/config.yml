@@ -28,11 +28,10 @@ parameters:
     description: "Where the build stores the built artifact temporarily."
     default: "/tmp/build"
     type: string
-  # @TODO: switch release over to environments instead of "branches" later for better understanding.
-  release-branch:
-    description: "Not to be edited. Used by CircleCI API calls to actually release code to an environment. This is typically 'develop', 'main', or 'master'. The environment mapped to the branch will be determined from $ENCODED_HOST_MAPPING."
-    default: ""
-    type: string
+  release:
+    description: "Flag for Release"
+    default: false
+    type: boolean
 
 # These are the directories that will be saved between builds and deploys.
 # Change these if the list below needs different folders. Directory names are
@@ -295,7 +294,6 @@ jobs:
       - run:
           name: Publish a Release
           command: |
-            RELEASE_BRANCH="<< pipeline.parameters.release-branch >>"
             if [ -f "./.circleci/scripts/release" ]; then
               ./.circleci/scripts/release
             else
@@ -306,7 +304,9 @@ workflows:
   version: 2
   build-deploy-pantheon:
     when:
-      equal: [ pantheon, << pipeline.parameters.host-variant >> ]
+      and:
+        - equal: [ pantheon, << pipeline.parameters.host-variant >> ]
+        - not: << pipeline.parameters.release >>
     jobs:
       - static_tests
       - build
@@ -326,7 +326,9 @@ workflows:
                 - 'master'
   build-deploy-acquia:
     when:
-      equal: [ acquia, << pipeline.parameters.host-variant >> ]
+      and:
+        - equal: [ acquia, << pipeline.parameters.host-variant >> ]
+        - not: << pipeline.parameters.release >>
     jobs:
       - static_tests
       - build
@@ -351,7 +353,9 @@ workflows:
                 - 'master'
   build-deploy-general:
     when:
-      equal: [ general, << pipeline.parameters.host-variant >> ]
+      and:
+        - equal: [ general, << pipeline.parameters.host-variant >> ]
+        - not: << pipeline.parameters.release >>
     jobs:
       - static_tests
       - build
@@ -369,7 +373,7 @@ workflows:
               ignore:
                 - /^deploy-.*$/
   release-to-environment:
-    when: << pipeline.parameters.release-branch >>
+    when: << pipeline.parameters.release >>
     jobs:
       - release
 
