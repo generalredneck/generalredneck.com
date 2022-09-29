@@ -1,0 +1,6 @@
+services:
+  highlight_js.style_manager:
+    class: Drupal\highlight_js\HighlightJsStyleManager
+    arguments:
+      - '@file_system'
+

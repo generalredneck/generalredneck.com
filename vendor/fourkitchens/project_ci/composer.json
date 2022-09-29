@@ -1,0 +1,11 @@
+{
+    "name": "fourkitchens/project_ci",
+    "description": "Scripts to help aid in deployment for sites.",
+    "authors": [
+        {
+            "name": "Allan Chappell",
+            "email": "allan@fourkitchens.com"
+        }
+    ],
+    "require": {}
+}

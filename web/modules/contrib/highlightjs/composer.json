@@ -1,0 +1,24 @@
+{
+    "name": "drupal/highlightjs",
+    "description": "JavaScript Syntax Highlighter for client-side syntax highlighting.",
+    "type": "drupal-module",
+    "authors": [],
+    "license": "GPL-2.0+",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "components/highlightjs",
+                "version": "9.12.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/components/highlightjs/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "components/highlightjs": "9.12.0"
+    }
+}
