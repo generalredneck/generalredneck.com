@@ -182,6 +182,7 @@ jobs:
   static_tests:
     <<: *defaults
     steps:
+      - printenv && exit 1
       - setup-project
       - run:
           name: run static tests
@@ -364,18 +365,14 @@ workflows:
                 - master
                 - develop
                 - /^release-.*$/
+              ignore:
+                - /^deploy-.*$/
 
   release-to-environment:
     when: << pipeline.parameters.release-branch >>
     jobs:
       - release:
-          requires:
-          - deploy
-          filters:
-            branches:
-              only:
-                - 'main'
-                - 'master'
+
 ###### Please do not change things in the commands without contributing back.
 orbs:
   node: circleci/node@4.1.0
