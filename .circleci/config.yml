@@ -367,11 +367,10 @@ workflows:
                 - /^release-.*$/
               ignore:
                 - /^deploy-.*$/
-
   release-to-environment:
     when: << pipeline.parameters.release-branch >>
     jobs:
-      - release:
+      - release
 
 ###### Please do not change things in the commands without contributing back.
 orbs:
