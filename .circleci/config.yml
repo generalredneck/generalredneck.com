@@ -17,7 +17,7 @@ parameters:
     type: string
     default: "America/Chicago"
   host-variant:
-    description: A string representing a site's host. EX acquia, pantheon
+    description: A string representing a site's host. EX Acquia, pantheon
     type: string
     default: "general"
   docroot:
@@ -25,11 +25,12 @@ parameters:
     default: "web"
     type: string
   artifact_workspace:
-    description: "Where the build stores the built artifact temporarly."
+    description: "Where the build stores the built artifact temporarily."
     default: "/tmp/build"
     type: string
-  release-environment:
-    description: "Not to be edited. Used by CircleCI API calls to actually release code to an environment. This is typically 'dev', 'test', 'prod', or 'live'"
+  # @TODO: switch release over to environments instead of "branches" later for better understanding.
+  release-branch:
+    description: "Not to be edited. Used by CircleCI API calls to actually release code to an environment. This is typically 'develop', 'main', or 'master'. The environment mapped to the branch will be determined from $ENCODED_HOST_MAPPING."
     default: ""
     type: string
 
@@ -292,6 +293,7 @@ jobs:
       - run:
           name: Publish a Release
           command: |
+            RELEASE_BRANCH="<< pipeline.parameters.release-branch >>"
             if [ -f "./.circleci/scripts/release" ]; then
               ./.circleci/scripts/release
             else
