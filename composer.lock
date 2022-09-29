@@ -3007,12 +3007,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourkitchens/project_ci.git",
-                "reference": "42bf3573ef8acd498a9ceaba958d0b9d9ebf33f3"
+                "reference": "99f2635c6b8302807a6a54184dff6f1d60dee16a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourkitchens/project_ci/zipball/42bf3573ef8acd498a9ceaba958d0b9d9ebf33f3",
-                "reference": "42bf3573ef8acd498a9ceaba958d0b9d9ebf33f3",
+                "url": "https://api.github.com/repos/fourkitchens/project_ci/zipball/99f2635c6b8302807a6a54184dff6f1d60dee16a",
+                "reference": "99f2635c6b8302807a6a54184dff6f1d60dee16a",
                 "shasum": ""
             },
             "type": "library",
@@ -3028,7 +3028,7 @@
                 "issues": "https://github.com/fourkitchens/project_ci/issues",
                 "source": "https://github.com/fourkitchens/project_ci/tree/custom_hosting"
             },
-            "time": "2022-09-27T14:50:05+00:00"
+            "time": "2022-09-29T15:23:44+00:00"
         },
         {
             "name": "grasmash/expander",

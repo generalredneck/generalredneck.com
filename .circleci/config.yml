@@ -28,6 +28,10 @@ parameters:
     description: "Where the build stores the built artifact temporarly."
     default: "/tmp/build"
     type: string
+  release-environment:
+    description: "Not to be edited. Used by CircleCI API calls to actually release code to an environment. This is typically 'dev', 'test', 'prod', or 'live'"
+    default: ""
+    type: string
 
 # These are the directories that will be saved between builds and deploys.
 # Change these if the list below needs different folders. Directory names are
@@ -358,6 +362,10 @@ workflows:
                 - master
                 - develop
                 - /^release-.*$/
+
+  release-to-enviornment:
+    when: << pipeline.parameters.release-environment >>
+    jobs:
       - release:
           requires:
           - deploy
@@ -366,7 +374,6 @@ workflows:
               only:
                 - 'main'
                 - 'master'
-
 ###### Please do not change things in the commands without contributing back.
 orbs:
   node: circleci/node@4.1.0
