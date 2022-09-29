@@ -365,8 +365,8 @@ workflows:
                 - develop
                 - /^release-.*$/
 
-  release-to-enviornment:
-    when: << pipeline.parameters.release-environment >>
+  release-to-environment:
+    when: << pipeline.parameters.release-branch >>
     jobs:
       - release:
           requires:
