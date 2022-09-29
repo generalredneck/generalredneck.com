@@ -1,0 +1,10 @@
+highlight_js.settings:
+  type: mapping
+  label: 'Highlight JS settings'
+  mapping:
+    select_mode:
+      type: string
+      label: 'Select mode'
+    style:
+      type: string
+      label: 'Highlight JS style'

@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Install file for Highlight JS library.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function highlight_js_requirements($phase) {
+  $requirements = [];
+
+  // Report Drupal version
+  if ($phase == 'runtime') {
+    $lib_dir = "libraries/highlightjs";
+    $lib_files = ['highlight.pack.min.js', 'styles/default.css'];
+    $lib_err = '';
+    $lib_link = 'https://github.com/components/highlightjs/archive/master.zip';
+    foreach ($lib_files as $lib_file) {
+      if (!file_exists($lib_dir . "/" . $lib_file)) {
+        $lib_err .= $lib_err ? ', ' : '';
+        $lib_err .= "$lib_file";
+      }
+    }
+
+    if ($lib_err) {
+      $value = FALSE;
+      $severity = REQUIREMENT_ERROR;
+      $description = "Highlight.js library not found. ";
+      $description .= "\nFiles : " . $lib_err . " Not found on '$lib_dir'. ";
+      $description .= "\nPlease download the files from Highlight.js and put into $lib_dir";
+      $description .= "\nDownload link : $lib_link";
+      $description .= "\n";
+    } else {
+      $description = t("The requirement is satisfied");
+      $value = t('Highlight.js Library found');
+      $severity = REQUIREMENT_OK;
+    }
+
+    $requirements['highlightjs'] = [
+      'title' => 'Highlight.js',
+      'description' => $description,
+      'value' => $value,
+      'severity' => $severity,
+      'weight' => 0,
+    ];
+  }
+
+  return $requirements;
+}
