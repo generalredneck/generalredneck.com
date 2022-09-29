@@ -182,7 +182,8 @@ jobs:
   static_tests:
     <<: *defaults
     steps:
-      - printenv && exit 1
+      - run:
+          command: printenv && exit 1
       - setup-project
       - run:
           name: run static tests
