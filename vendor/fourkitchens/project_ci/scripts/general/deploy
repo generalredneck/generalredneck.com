@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -eo pipefail
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+git config --global user.email "$GIT_EMAIL"
+git config --global user.name "CI Bot"
+git config --global core.fileMode false
+sed -i '1,/# :::::::::::::::::::::: cut ::::::::::::::::::::::/d' .gitignore
+# remove any .git directories that may exist in vendor libraries* so those
+# libraries don't get excluded from our repo. Remember kiddies somedir/*
+# returns all files/dirs that are NOT dot (hidden). This protects our repos'
+# .git folder from being blown away.
+find ./* -type d | grep .git | xargs rm -rf
+
+# Remove unwanted gitignores here. Follow the example below.
+# Remove simplesamlphp .gitignore which would cause our config and metadata
+# symlinks to be ignored. If it's already not there, GREAT!
+# - rm ./vendor/simplesamlphp/simplesamlphp/.gitignore || exit 0
+
+# Commit and push to a "deploy" branch.
+git add .
+git commit -am "Built assets."
+DEPLOY_BRANCH=deploy-$CIRCLE_BRANCH
+git push origin $CIRCLE_BRANCH:$DEPLOY_BRANCH -f --tags
+echo "If deployment was successful, an artifact should be availible in the origin repo at $DEPLOY_BRANCH."
+# Provides $HOSTING_MAPPING_* variables.
+$SCRIPT_DIR/parsehostmapping $CIRCLE_BRANCH
+if [[ "$HOSTING_MAPPING_ENV" == "prod" ]] || [[ "$HOSTING_MAPPING_ENV" == "live" ]]; then
+  echo "We will not automatically deploy to Production. Follow the documentation"
+  echo "at https://circleci.com/docs/managing-api-tokens to get an api token"
+  echo "then run the following replacing 'main' with the branch you are releasing:"
+  echo "curl --request POST --url https://circleci.com/api/v2/project/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/pipeline --header \"Circle-Token: \$CIRCLE_TOKEN\" --header \"content-type: application/json\" --data '{\"parameters\":{\"release\":true,\"branch\":\"main\"}}'"
+else
+  curl --request POST --url https://circleci.com/api/v2/project/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/pipeline --header "Circle-Token: $CIRCLE_TOKEN" --header "content-type: application/json" --data "{\"parameters\":{\"release\":true,\"branch\":\"$CIRCLE_BRANCH\"}}"
+fi
